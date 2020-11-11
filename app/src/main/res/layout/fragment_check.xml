@@ -3,27 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     tools:context=".CheckFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="자가 진단"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="40sp" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-            
+            android:orientation="vertical"
+            android:layout_marginTop="200px"
+            android:background="@drawable/edge">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="fsdfsdfsdfsdfsdfsdfsdfsdfsdfsddfsdfsdfsfsfss"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="네"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="아니요"/>
+
+            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:id="@+id/spark_button"
+        android:text="확인"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/colorPrimaryDark"
+        app:sub_btn_ripple_color="@color/colorAccent"
+        app:sub_btn_tick_color="@color/white" />
+</LinearLayout>
 </FrameLayout>
