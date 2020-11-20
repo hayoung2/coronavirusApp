@@ -4,13 +4,13 @@
     <item
         android:id="@+id/nav_check"
         android:icon="@drawable/ic_check"
-        android:title=""/>
+        android:title="자가진단"/>
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title=""/>
+        android:title="현황"/>
     <item
         android:id="@+id/nav_market"
         android:icon="@drawable/ic_market"
-        android:title=""/>
+        android:title="마켓"/>
 </menu>

@@ -2,28 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:id="@+id/start_background"
     android:layout_width="match_parent"
-    android:background="#ffffff"
+    android:background="@drawable/backgorund_list"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="150dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/wearmask" />
+        android:id="@+id/coronaLogo"
+        android:layout_width="172dp"
+        android:transitionName="imageTransition"
+        app:srcCompat="@drawable/corona"
+        android:layout_height="208dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="120dp"
+       />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/maskText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:shadowColor="#3E3434"
         android:singleLine="false"
+        android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="마스크 필수!"
+        android:text="Stay Home"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="25sp"
-        android:textStyle="normal|bold" />
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/creator"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Created by Dee2"/>
 </LinearLayout>
