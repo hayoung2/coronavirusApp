@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
-    tools:context=".MainFragment">
+    tools:context=".MainFragment"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+
 
         <ImageView
             android:id="@+id/ddd"
@@ -45,58 +43,186 @@
                 android:layout_height="wrap_content"
                 android:text="조회" />
         </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30px">
+        android:layout_marginTop="20dp">
         <LinearLayout
-            android:layout_width="91dp"
-            android:layout_height="84dp"
-            android:layout_marginTop="30px"
-            android:layout_marginLeft="50dp"
-            android:orientation="vertical">
+            android:layout_width="180dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:elevation="10dp"
 
-            <TextView
-                android:id="@+id/textView2"
+            android:layout_marginTop="10px"
+            android:background="@drawable/box_edge"
+           >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/mask"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="확진자"
-                android:textColor="#000000"
-                android:textSize="25sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
 
-            <TextView
-                android:id="@+id/corona2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="#000000" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/decideText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="확진자"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/decide_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0dfsdf"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="91dp"
-            android:layout_height="84dp"
-            android:layout_marginTop="30px"
-            android:layout_marginLeft="50dp"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView1"
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10px"
+            android:background="@drawable/box_edge"
+            >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/die"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="사망자"
-                android:textColor="#000000"
-                android:textSize="25sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
 
-            <TextView
-                android:id="@+id/corona"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="#000000" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/deathText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사망자"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/death_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0sfsd"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    </LinearLayout>
 
 
-</FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10px"
+            android:background="@drawable/box_edge"
+            >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/treat"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/examText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="검사진행"
+                    android:textColor="#000000"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/exam_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0dfsdf"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10px"
+            android:elevation="10dp"
+            android:background="@drawable/box_edge"
+            >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/run"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/deathText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="격리해제"
+                    android:textColor="#000000"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/death_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0sfsd"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+</LinearLayout>
