@@ -29,7 +29,7 @@
     <LinearLayout
         android:layout_width="387dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:background="@drawable/edge"
         android:orientation="vertical">
@@ -54,6 +54,7 @@
             <CheckBox
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:background="@color/design_default_color_secondary_variant"
                 android:layout_marginLeft="10dp" />
 
         </LinearLayout>
@@ -182,12 +183,12 @@
             android:id="@+id/spark_button"
             android:layout_width="160dp"
             android:layout_height="20dp"
-            android:layout_marginLeft="95dp"
+            android:layout_marginLeft="105dp"
             android:text="확인"
             android:textAlignment="center"
             android:textColor="@color/gray"
             app:sub_btn_background="@color/white"
-            app:sub_btn_duration="3000"
+            app:sub_btn_duration="2000"
             app:sub_btn_line_color="@color/colorPrimaryDark"
             app:sub_btn_ripple_color="@color/colorAccent"
             app:sub_btn_tick_color="@color/white" />
