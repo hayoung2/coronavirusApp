@@ -1,15 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".MarketFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="130dp">
+
+        <ImageView
+            android:id="@+id/maskButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/medical_mask"/>
+
+        <ImageView
+            android:id="@+id/handButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/hand_wash" />
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:orientation="horizontal">
+
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:orientation="vertical"
+       android:layout_marginBottom="10dp">
+
+       <TextView
+       android:id="@+id/maskinfo1"
+       android:text="dldjfl 마스크 "
+       android:textSize="30sp"
+       android:layout_marginLeft="20dp"
+       android:textColor="@color/black"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       />
+       <TextView
+           android:id="@+id/maskPrice1"
+           android:text="0 원 "
+           android:textSize="20sp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="200dp"
+           android:textColor="@color/black"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           />
+
+   </LinearLayout>
+
+    <ImageView
+        android:id="@+id/maskUrl1"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/buying"
+        android:layout_marginLeft="90dp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/maskinfo2"
+                android:text="dldjfl 마스크 "
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/maskPrice2"
+                android:text="0 원 "
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="200dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/maskUrl2"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/buying"
+            android:layout_marginLeft="90dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/maskinfo3"
+                android:text="dldjfl 마스크 "
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/maskPrice3"
+                android:text="0 원 "
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="200dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/maskUrl3"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/buying"
+            android:layout_marginLeft="90dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/maskinfo4"
+                android:text="dldjfl 마스크 "
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/maskPrice4"
+                android:text="0 원 "
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="200dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/maskUrl4"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/buying"
+            android:layout_marginLeft="90dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/maskinfo5"
+                android:text="dldjfl 마스크 "
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/maskPrice5"
+                android:text="0 원 "
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="200dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/maskUrl5"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/buying"
+            android:layout_marginLeft="90dp"/>
+    </LinearLayout>
+
+</LinearLayout>
