@@ -9,18 +9,20 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="130dp">
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/colorIvory">
 
         <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="140dp"
             android:id="@+id/maskButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/medical_mask"/>
+            android:src="@drawable/medical_mask" />
 
         <ImageView
+            android:layout_marginTop="15dp"
             android:id="@+id/handButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -30,29 +32,29 @@
 
     </LinearLayout>
 
-<LinearLayout
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="10dp"
     android:orientation="horizontal">
 
 
    <LinearLayout
-       android:layout_width="wrap_content"
+       android:layout_width="320dp"
        android:layout_height="wrap_content"
        android:layout_marginTop="20dp"
        android:orientation="vertical"
        android:layout_marginBottom="10dp">
 
        <TextView
-       android:id="@+id/maskinfo1"
-       android:text="dldjfl 마스크 "
-       android:textSize="30sp"
-       android:layout_marginLeft="20dp"
-       android:textColor="@color/black"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       />
+           android:textStyle="bold"
+           android:id="@+id/maskinfo1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="20dp"
+           android:text=""
+           android:textColor="@color/black"
+           android:textSize="25sp" />
        <TextView
            android:id="@+id/maskPrice1"
            android:text="0 원 "
@@ -71,7 +73,7 @@
         android:layout_width="55dp"
         android:layout_height="match_parent"
         android:src="@drawable/buying"
-        android:layout_marginLeft="90dp"/>
+        android:layout_marginLeft="35dp"/>
 </LinearLayout>
 
     <LinearLayout
@@ -81,31 +83,32 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            android:layout_marginBottom="10dp">
+            android:orientation="vertical">
 
             <TextView
+                android:textStyle="bold"
                 android:id="@+id/maskinfo2"
-                android:text="dldjfl 마스크 "
-                android:textSize="30sp"
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="23sp" />
+
             <TextView
                 android:id="@+id/maskPrice2"
-                android:text="0 원 "
-                android:textSize="20sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="200dp"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="10dp"
+                android:text="0 원 "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -114,7 +117,7 @@
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:src="@drawable/buying"
-            android:layout_marginLeft="90dp"/>
+            android:layout_marginLeft="35dp"/>
     </LinearLayout>
 
 
@@ -125,16 +128,17 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="vertical"
             android:layout_marginBottom="10dp">
 
             <TextView
+                android:textStyle="bold"
                 android:id="@+id/maskinfo3"
-                android:text="dldjfl 마스크 "
-                android:textSize="30sp"
+                android:text=""
+                android:textSize="23sp"
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
@@ -158,7 +162,7 @@
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:src="@drawable/buying"
-            android:layout_marginLeft="90dp"/>
+            android:layout_marginLeft="35dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -168,7 +172,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="vertical"
@@ -176,8 +180,9 @@
 
             <TextView
                 android:id="@+id/maskinfo4"
-                android:text="dldjfl 마스크 "
-                android:textSize="30sp"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="23sp"
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
@@ -201,7 +206,7 @@
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:src="@drawable/buying"
-            android:layout_marginLeft="90dp"/>
+            android:layout_marginLeft="35dp"/>
     </LinearLayout>
 
 
@@ -212,7 +217,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="vertical"
@@ -220,8 +225,9 @@
 
             <TextView
                 android:id="@+id/maskinfo5"
-                android:text="dldjfl 마스크 "
-                android:textSize="30sp"
+                android:text=""
+                android:textSize="23sp"
+                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
@@ -245,7 +251,7 @@
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:src="@drawable/buying"
-            android:layout_marginLeft="90dp"/>
+            android:layout_marginLeft="35dp"/>
     </LinearLayout>
 
 </LinearLayout>

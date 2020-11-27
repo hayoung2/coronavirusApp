@@ -9,6 +9,12 @@
     android:orientation="vertical">
 
 
+<LinearLayout
+    android:background="@color/colorIvory"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/ddd"
@@ -22,40 +28,67 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             >
 
 
             <EditText
+                android:background="@drawable/edit_btn_style"
                 android:id="@+id/date"
-                android:layout_width="500px"
-                android:layout_height="150px"
+                android:layout_width="700px"
+                android:layout_height="100px"
                 android:textSize="20sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
                 android:textColor="#000000" />
 
             <Button
                 android:id="@+id/search"
-                android:layout_marginLeft="10dp"
+                android:layout_width="74dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_style"
+
                 android:text="조회" />
         </LinearLayout>
 
+</LinearLayout>
 
+    <TextView
+    android:id="@+id/dateView"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:text="Date : 20201126"
+    android:textSize="18sp"
+    android:textColor="@color/black"
+    android:layout_marginTop="20dp"
+    />
+
+    <TextView
+        android:id="@+id/dayDecideCnt"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="일일확진자 : "
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp">
         <LinearLayout
             android:layout_width="180dp"
             android:layout_height="98dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
-            android:elevation="10dp"
-
             android:layout_marginTop="10px"
             android:background="@drawable/box_edge"
            >
@@ -71,7 +104,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-
                 android:orientation="vertical">
 
                 <TextView
@@ -98,7 +130,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10px"
-            android:background="@drawable/box_edge"
+            android:background="@drawable/box_edge_white"
             >
 
             <ImageView
@@ -139,14 +171,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
         <LinearLayout
             android:layout_width="180dp"
             android:layout_height="98dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10px"
-            android:background="@drawable/box_edge"
+            android:background="@drawable/box_edge_white"
             >
 
             <ImageView
@@ -187,7 +220,6 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10px"
-                android:elevation="10dp"
                 android:background="@drawable/box_edge"
                 >
 
@@ -238,8 +270,6 @@
             android:layout_height="98dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
-            android:elevation="10dp"
-
             android:layout_marginTop="10px"
             android:background="@drawable/box_edge"
             >
@@ -282,8 +312,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10px"
-
-            android:background="@drawable/box_edge"
+            android:background="@drawable/box_edge_white"
             >
 
             <ImageView

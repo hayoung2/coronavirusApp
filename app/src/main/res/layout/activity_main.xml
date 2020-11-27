@@ -19,9 +19,9 @@
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemBackground="@android:color/black"
-        app:itemIconTint="#ffffff"
-        app:itemTextColor="#ffffff"
+        app:itemBackground="@color/colorIvory"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
         app:menu="@menu/button_navigation"
         android:layout_alignParentBottom="true"
         />

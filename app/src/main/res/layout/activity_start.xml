@@ -37,5 +37,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:text="Created by Dee2"/>
+        android:text="Created by hayoung2"/>
 </LinearLayout>

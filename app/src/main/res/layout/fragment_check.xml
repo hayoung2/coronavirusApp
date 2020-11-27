@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@color/design_default_color_secondary_variant" />
+            android:background="@color/colorIvory" />
         <ImageView
             android:layout_width="121dp"
             android:layout_height="80dp"
@@ -29,168 +29,161 @@
     <LinearLayout
         android:layout_width="387dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_gravity="center"
         android:background="@drawable/edge"
         android:orientation="vertical">
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
 
-
             <TextView
+                android:id="@+id/que1"
+                android:textFontWeight="600"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:fontFamily="@font/binggraebold"
                 android:text="Q. 발열 또는 마른 기침을 하시나요 ? "
-                android:textColor="@color/black" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@color/design_default_color_secondary_variant"
-                android:layout_marginLeft="10dp" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
 
             <TextView
+                android:textFontWeight="600"
+                android:id="@+id/que2"
+                android:lineSpacingExtra="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Q. 최근 갑자기 피로감이 심해지셨나요 ? "
+                android:textSize="20sp"
+                android:fontFamily="@font/binggraebold"
+                android:text="Q. 최근 갑자기 피로감이 심해지셨나요 ?"
                 android:textColor="@color/black" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="10dp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
 
             <TextView
+                android:textFontWeight="600"
+                android:id="@+id/que3"
+                android:lineSpacingExtra="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Q. 몸살이나 설사 두통을 하시나요 ? "
+                android:textSize="20sp"
+                android:fontFamily="@font/binggraebold"
+                android:text="Q. 몸살이나 설사 또는 두통을 하시나요 ? "
                 android:textColor="@color/black" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="10dp" />
+
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
             <TextView
-                android:layout_width="295dp"
+                android:textFontWeight="600"
+                android:id="@+id/que4"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="2dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/binggraebold"
                 android:text="Q. 최근 확진자나 자가격리자와 접촉한 적 있으십니까 ? "
                 android:textColor="@color/black"
-                android:textSize="18sp" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
             <TextView
-                android:layout_width="295dp"
+
+                android:textFontWeight="600"
+                android:id="@+id/que5"
+                android:lineSpacingExtra="2dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/binggraebold"
                 android:text="Q. 피부 발진, 손가락 또는 발가락 변색 증상이 나타나시나요 ? "
                 android:textColor="@color/black"
-                android:textSize="18sp" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="297dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
             <TextView
-                android:layout_width="295dp"
+                android:textFontWeight="600"
+                android:id="@+id/que6"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="2dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/binggraebold"
                 android:text="Q. 최근 사람이 많은 장소에 돌아다니신 적 있으신가요 ? "
                 android:textColor="@color/black"
-                android:textSize="18sp" />
-            <CheckBox
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
-
-
 
 
         <com.spark.submitbutton.SubmitButton
             android:id="@+id/spark_button"
-            android:layout_width="160dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="105dp"
+            android:layout_width="109dp"
+            android:layout_height="73dp"
+            android:layout_gravity="center_horizontal"
             android:text="확인"
             android:textAlignment="center"
-            android:textColor="@color/gray"
-            app:sub_btn_background="@color/white"
-            app:sub_btn_duration="2000"
-            app:sub_btn_line_color="@color/colorPrimaryDark"
-            app:sub_btn_ripple_color="@color/colorAccent"
+            android:textColor="@color/white"
+            app:sub_btn_background="@color/colorBlue"
+            app:sub_btn_duration="1800"
+            app:sub_btn_line_color="@color/colorBlue"
+            app:sub_btn_ripple_color="@color/colorBlue"
             app:sub_btn_tick_color="@color/white" />
 
     </LinearLayout>
