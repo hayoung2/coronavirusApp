@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.NodeList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -28,10 +31,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class MainFragment extends Fragment {
 
-    TextView text,text1;
+    TextView decideCnt,deathCnt,examCnt,accExamCnt,careCnt,clearCnt,dateView,dayDecideCnt;
     EditText date;
     Button search;
     public String data="";
+    String yesterday="";
 
     public MainFragment(){
 
@@ -50,13 +54,19 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_main, container, false);
-        text=  (TextView) v.findViewById(R.id.corona);
-        text1=v.findViewById(R.id.corona2);
+        deathCnt= v.findViewById(R.id.death_cnt);
+        decideCnt=v.findViewById(R.id.decide_cnt);
+        examCnt=v.findViewById(R.id.exam_cnt);
+        accExamCnt=v.findViewById(R.id.acc_exam_cnt);
+        careCnt=v.findViewById(R.id.care_cnt);
+        clearCnt=v.findViewById(R.id.clear_cnt);
+        dayDecideCnt=v.findViewById(R.id.dayDecideCnt);
+        dateView=v.findViewById(R.id.dateView);
         search=v.findViewById(R.id.search);
         date=v.findViewById(R.id.date);
         ExampleThread2 ex1=new ExampleThread2();
         AsyncTask<String, String, String> tmp=ex1.execute();
-        data="20201031";
+        data="20201126";
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +74,7 @@ public class MainFragment extends Fragment {
                 data=date.getText().toString();
                 ExampleThread2 ex1=new ExampleThread2();
                 AsyncTask<String, String, String> tmp=ex1.execute();
+                dateView.setText("Date : "+data);
             }
         });
 
@@ -84,44 +95,89 @@ public class MainFragment extends Fragment {
                 StringBuilder urlBuilder = new
                         StringBuilder(); /*URL*/
                 Log.i("성공","1번");
+
+                data=Integer.toString(Integer.parseInt(data)-1);
+                StringBuilder urlBuilder2 = new
+                        StringBuilder(); /*URL*/
+                Log.i("성공","1번");
+
+
+
                 URL url = new URL(urlBuilder.toString());
+                URL url2 = new URL(urlBuilder2.toString());
                 Log.i("성공","2번");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                HttpURLConnection conn2 = (HttpURLConnection) url2.openConnection();
                 Log.i("성공","3번");
                 conn.setRequestMethod("GET");
+                conn2.setRequestMethod("GET");
                 Log.i("성공","4번");
                 conn.setRequestProperty("Content-type", "application/json");
+                conn2.setRequestProperty("Content-type", "application/json");
+
 
                 BufferedReader rd;
+                BufferedReader rd2;
+
                 if (conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
                     rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 } else {
                     rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
                 }
 
-                StringBuilder sb = new StringBuilder();
+                if (conn2.getResponseCode() >= 200 && conn2.getResponseCode() <= 300) {
+                    rd2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
+                } else {
+                    rd2 = new BufferedReader(new InputStreamReader(conn2.getErrorStream()));
+                }
+
+                final StringBuilder sb = new StringBuilder();
+                final StringBuilder sb2 = new StringBuilder();
                 String line;
+                String line2;
                 while ((line = rd.readLine()) != null) {
                     sb.append(line);
                 }
+                while ((line2 = rd2.readLine()) != null) {
+                    sb2.append(line2);
+                }
 
                 rd.close();
-
-                String tmp=sb.toString();
-                int count=sb.indexOf("deathCnt");
-                int decide_cnt=sb.indexOf("decideCnt");
-
-                Log.d("dd",sb.toString());
                 conn.disconnect();
+                rd2.close();
+                conn2.disconnect();
+                new Handler(Looper.getMainLooper()).post(new Runnable(){
+                    @Override
+                    public void run() {
+                        int count=sb.toString().indexOf("deathCnt");
+                        int decide_cnt=sb.toString().indexOf("decideCnt");
 
-                text.setText(tmp.substring(count+9,count+11));
-                text1.setText(tmp.substring(decide_cnt+10,decide_cnt+15));
+                        deathCnt.setText(sb.toString().substring(count+6,count+20).replaceAll("[^0-9]", "")+"명");
+                        decideCnt.setText(sb.substring(decide_cnt+6,decide_cnt+20).replaceAll("[^0-9]", "")+"명");
+
+                        decide_cnt=sb2.toString().indexOf("decideCnt");
+                        dayDecideCnt.setText("일일 확진자 : "+Integer.toString(Integer.parseInt(decideCnt.getText().toString().replaceAll("[^0-9]", ""))
+                        -Integer.parseInt(sb2.substring(decide_cnt,decide_cnt+25).replaceAll("[^0-9]", "")))+"명");
+
+
+                        count=sb.toString().indexOf("examCnt");
+                        examCnt.setText(sb.toString().substring(count+6,count+20).replaceAll("[^0-9]", "")+"명");
+                        count=sb.toString().indexOf("accExamCnt");
+                        accExamCnt.setText(sb.toString().substring(count+6,count+20).replaceAll("[^0-9]", "")+"명");
+                        count=sb.toString().indexOf("careCnt");
+                        careCnt.setText(sb.toString().substring(count+6,count+20).replaceAll("[^0-9]", "")+"명");
+                        count=sb.toString().indexOf("clearCnt");
+                        clearCnt.setText(sb.toString().substring(count+6,count+20).replaceAll("[^0-9]", "")+"명");
+                    }
+                });
 
             }catch (Exception e){
                 Log.i(e.toString(),"에러 남");
             }
             return "ddd";
         }
+
+
         @Override
         protected void onProgressUpdate(String... params) {
 
@@ -133,5 +189,5 @@ public class MainFragment extends Fragment {
 
     }
 
-//    AsyncTask<String, Void, HttpResponse> asyncTask = new AsyncTask<String, Void, HttpResponse>() {
+
 }
