@@ -55,8 +55,6 @@ public class MarketFragment extends Fragment {
            maskPrice[i]=v.findViewById(id);
         }
 
-
-       MaskCrawling();
        handler = new Handler(){
             @Override
             public void handleMessage(Message msg) {
@@ -83,6 +81,8 @@ public class MarketFragment extends Fragment {
                 }
             }
         };
+        MaskCrawling();
+
         maskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,7 +93,6 @@ public class MarketFragment extends Fragment {
         handButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 HandCrawling();
             }
         });
@@ -102,6 +101,51 @@ public class MarketFragment extends Fragment {
     }
 
     private void HandCrawling() {
+        new Thread(){
+            @Override
+            public void run() {
+                Document doc = null;
+                int cnt =0;
+                try {
+                    doc = Jsoup.connect("http://browse.auction.co.kr/search?keyword=%EC%86%90%EC%86%8C%EB%8F%85%EC%A0%9C&itemno=&nickname=&frm=hometab&dom=auction&isSuggestion=No&retry=&Fwk=%EC%86%90%EC%86%8C%EB%8F%85%EC%A0%9C&acode=SRP_SU_0100&arraycategory=&encKeyword=%EC%86%90%EC%86%8C%EB%8F%85%EC%A0%9C").get();
+                    Elements urls = doc.select(".link--itemcard");
+                    Elements titles = doc.select(".link--itemcard .text--title");
+                    Elements prices =doc.select(".price_seller .text--price_seller");
+                    for (Element e: titles) {
+                        title[cnt]=e.text();
+                        cnt++;
+                        if (cnt >4){
+                            break;
+                        }
+                    }
+                    cnt=0;
+                    for (Element e: urls) {
+                        url[cnt]=e.attr("href");
+                        cnt++;
+                        if (cnt >4){
+                            break;
+                        }
+                    }
+                    cnt=0;
+                    for (Element e: prices) {
+                        price[cnt]=e.text() +" 원";
+                        cnt++;
+                        if (cnt >4){
+                            break;
+                        }
+                    }
+
+                    bundle.putStringArray("title", title);
+                    bundle.putStringArray("url",url);
+                    bundle.putStringArray("price",price);
+                    Message msg = handler.obtainMessage();
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
 
 
     }
@@ -118,10 +162,9 @@ public class MarketFragment extends Fragment {
                     Elements titles = doc.select(".link--itemcard .text--title");
                     Elements prices =doc.select(".price_seller .text--price_seller");
                     for (Element e: titles) {
-                        Log.d(" 확인 : ",e.attr("href"));
                         title[cnt]=e.text();
                         cnt++;
-                        if (cnt >5){
+                        if (cnt >4){
                             break;
                         }
                     }
@@ -129,7 +172,7 @@ public class MarketFragment extends Fragment {
                     for (Element e: urls) {
                         url[cnt]=e.attr("href");
                         cnt++;
-                        if (cnt >5){
+                        if (cnt >4){
                             break;
                         }
                     }
@@ -137,7 +180,7 @@ public class MarketFragment extends Fragment {
                     for (Element e: prices) {
                         price[cnt]=e.text() +" 원";
                         cnt++;
-                        if (cnt >5){
+                        if (cnt >4){
                             break;
                         }
                     }
