@@ -23,7 +23,7 @@
    - [x] 특정 질문 또는 개수에 따른 다른 결과
    - [x] 클릭 시, Animation, 전화 표시
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/39898938/100467089-4b293c80-3115-11eb-83ad-833d8c155687.gif)                                                      ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/39898938/100466908-069da100-3115-11eb-9c69-ca419c4138de.gif)  
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/39898938/100467089-4b293c80-3115-11eb-83ad-833d8c155687.gif)    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;      ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/39898938/100466908-069da100-3115-11eb-9c69-ca419c4138de.gif)  
 
 
 
@@ -34,5 +34,5 @@
 - [x] 결제시스템 구현(bootpay api 사용)
 - [x] 테스트(가상계좌, 페이코..) & 실결제 모드(휴대폰)
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/39898938/100466859-f1287700-3114-11eb-8a48-8a2552738428.gif)  ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/39898938/102724743-337c5700-4355-11eb-90b9-4b874cf6cb7d.gif)   ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/39898938/102724748-370fde00-4355-11eb-9025-37111f421bd9.gif) 
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/39898938/100466859-f1287700-3114-11eb-8a48-8a2552738428.gif)  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/39898938/102724743-337c5700-4355-11eb-90b9-4b874cf6cb7d.gif)  &nbsp;  &nbsp;  &nbsp;  &nbsp;   ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/39898938/102724748-370fde00-4355-11eb-9025-37111f421bd9.gif) 
 
