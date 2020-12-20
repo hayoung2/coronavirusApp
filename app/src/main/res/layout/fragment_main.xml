@@ -56,18 +56,34 @@
 
 </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
     <TextView
     android:id="@+id/dateView"
     android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_gravity="center_horizontal"
     android:layout_height="wrap_content"
-    android:text="Date : 20201126"
+        android:layout_marginLeft="150dp"
+    android:text="Date : "
     android:textSize="18sp"
     android:textColor="@color/black"
     android:layout_marginTop="20dp"
     />
-
+    <TextView
+        android:id="@+id/dateValue"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        />
+    </LinearLayout>
     <TextView
         android:id="@+id/dayDecideCnt"
         android:textStyle="bold"

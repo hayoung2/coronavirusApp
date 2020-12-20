@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import kr.co.bootpay.BootpayAnalytics;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -25,13 +26,15 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class MainFragment extends Fragment {
 
-    TextView decideCnt,deathCnt,examCnt,accExamCnt,careCnt,clearCnt,dateView,dayDecideCnt;
+    TextView decideCnt,deathCnt,examCnt,accExamCnt,careCnt,clearCnt,dateView,dayDecideCnt,dateValue;
     EditText date;
     Button search;
     public String data="";
@@ -46,6 +49,7 @@ public class MainFragment extends Fragment {
    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
 
 
@@ -64,9 +68,15 @@ public class MainFragment extends Fragment {
         dateView=v.findViewById(R.id.dateView);
         search=v.findViewById(R.id.search);
         date=v.findViewById(R.id.date);
+        dateValue=v.findViewById(R.id.dateValue);
+
+        SimpleDateFormat simpleDate = new SimpleDateFormat("yyyyMMdd");
+        Date dateV =new Date();
+        dateV = new Date(dateV.getTime()+(1000*60*60*24*-1));
+        dateValue.setText(simpleDate.format(dateV));
         ExampleThread2 ex1=new ExampleThread2();
         AsyncTask<String, String, String> tmp=ex1.execute();
-        data="20201126";
+        data=simpleDate.format(dateV).replaceAll(" ","");
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +84,7 @@ public class MainFragment extends Fragment {
                 data=date.getText().toString();
                 ExampleThread2 ex1=new ExampleThread2();
                 AsyncTask<String, String, String> tmp=ex1.execute();
-                dateView.setText("Date : "+data);
+                dateValue.setText(data);
             }
         });
 
@@ -93,12 +103,12 @@ public class MainFragment extends Fragment {
                 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                 DocumentBuilder db = dbf.newDocumentBuilder();
                 StringBuilder urlBuilder = new
-                        StringBuilder(); /*URL*/
+                        StringBuilder("http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=mftadouy%2Bo9ROaRw7EADk02FYgh06%2BF%2FXs1rAnkzfifweeV%2Bhg22qr3lLY93MJTTtczz%2FG33BnlimtbBPwur8Q%3D%3D&pageNo=1&numOfRows=10&startCreateDt="+data+"&endCreateDt="+data); /*URL*/
                 Log.i("성공","1번");
 
                 data=Integer.toString(Integer.parseInt(data)-1);
                 StringBuilder urlBuilder2 = new
-                        StringBuilder(); /*URL*/
+                        StringBuilder("http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=mftadouy%2Bo9ROaRw7EADk02FYgh06%2BF%2FXs1rAnkzfifweeV%2Bhg22qr3lLY93MJTTtczz%2FG33BnlimtbBPwur8Q%3D%3D&pageNo=1&numOfRows=10&startCreateDt="+data+"&endCreateDt="+data); /*URL*/
                 Log.i("성공","1번");
 
 
