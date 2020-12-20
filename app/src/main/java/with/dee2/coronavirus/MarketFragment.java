@@ -4,7 +4,19 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import kr.co.bootpay.Bootpay;
+import kr.co.bootpay.BootpayAnalytics;
+import kr.co.bootpay.enums.UX;
+import kr.co.bootpay.listener.CancelListener;
+import kr.co.bootpay.listener.CloseListener;
+import kr.co.bootpay.listener.ConfirmListener;
+import kr.co.bootpay.listener.DoneListener;
+import kr.co.bootpay.listener.ErrorListener;
+import kr.co.bootpay.listener.ReadyListener;
+import kr.co.bootpay.model.BootExtra;
+import kr.co.bootpay.model.BootUser;
 
 import android.os.Handler;
 import android.os.Message;
@@ -24,8 +36,10 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 import static with.dee2.coronavirus.R.id.handButton;
+import static with.dee2.coronavirus.R.id.start;
 
 public class MarketFragment extends Fragment {
+
 
     ImageView maskButton,handButton;
     TextView[] maskInfo=new TextView[5];
@@ -46,6 +60,7 @@ public class MarketFragment extends Fragment {
         maskButton=v.findViewById(R.id.maskButton);
         handButton=v.findViewById(R.id.handButton);
 
+
        for (int i=0;i<5;i++){
            int id = getResources().getIdentifier("maskinfo"+(i+1), "id", "with.dee2.coronavirus");
            maskInfo[i]=v.findViewById(id);
@@ -60,13 +75,9 @@ public class MarketFragment extends Fragment {
             public void handleMessage(Message msg) {
                 Bundle bundle = msg.getData();
                 int cnt=0;
-                for (String tmp: bundle.getStringArray("title")){
+                for (final String tmp: bundle.getStringArray("title")){
                     maskInfo[cnt].setText(tmp);
-                    cnt++;
-                }
-                cnt=0;
-                for (final String tmp : bundle.getStringArray("url")){
-                    maskUrl[cnt].setOnClickListener(new View.OnClickListener() {
+                    maskInfo[cnt].setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(tmp)));
@@ -74,9 +85,25 @@ public class MarketFragment extends Fragment {
                     });
                     cnt++;
                 }
+
                 cnt=0;
                 for (String tmp : bundle.getStringArray("price")){
                     maskPrice[cnt].setText(tmp);
+                    cnt++;
+                }
+                cnt=0;
+                for (final String tmp : bundle.getStringArray("url")){
+                    final int idx=cnt;
+                    maskUrl[cnt].setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            Intent intent=new Intent(getActivity(), PaymentActivity.class);
+                            intent.putExtra("price",maskPrice[idx].getText().toString());
+                            intent.putExtra("name",maskInfo[idx].getText().toString());
+                            startActivity(intent);
+                        }
+                    });
                     cnt++;
                 }
             }
@@ -199,5 +226,7 @@ public class MarketFragment extends Fragment {
         }.start();
 
     }
+
+
 
 }
